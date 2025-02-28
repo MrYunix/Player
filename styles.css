@@ -80,6 +80,8 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-height: 300px; /* Limitar la altura de la lista de capítulos */
+    overflow-y: auto;  /* Habilitar desplazamiento vertical */
 }
 
 .chapter-list a {
