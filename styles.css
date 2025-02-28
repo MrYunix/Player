@@ -6,17 +6,17 @@ body {
     background-color: #1e1e1e;
     color: white;
     text-align: center;
-    overflow-x: hidden;  /* Evita el desplazamiento horizontal */
 }
 
 /* ==== ESTILOS PARA INDEX ==== */
 .container {
     display: flex;
+    flex-direction: row;
     width: 100%;
     height: 100vh;
-    position: relative;
 }
 
+/* Sidebar */
 .sidebar {
     width: 30%;
     background-color: #222;
@@ -25,7 +25,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    position: sticky;
+    position: sticky; /* Se queda fijo al hacer scroll */
     top: 0;
     height: 100vh;
 }
@@ -33,6 +33,7 @@ body {
 .sidebar h1 {
     margin-bottom: 20px;
     font-size: 24px;
+    text-align: center;
 }
 
 .sidebar img {
@@ -47,58 +48,63 @@ body {
     font-size: 16px;
     color: #ddd;
     font-style: italic;
+    text-align: center;
 }
 
-/* ==== ESTILOS PARA LA CABECERA PLAYER ==== */
+/* ==== CABECERA PLAYER ==== */
 .page-header {
-    background-color: #444;  /* Fondo gris para la sección de PLAYER */
+    background-color: #444;
     padding: 20px;
-    border-radius: 10px;  /* Bordes redondeados */
-    margin-bottom: 30px;  /* Espacio debajo de la cabecera */
+    border-radius: 10px;
+    margin-bottom: 30px;
 }
 
 .page-title {
-    font-size: 36px;  /* Tamaño grande para la cabecera */
+    font-size: 36px;
     font-weight: bold;
-    color: white; /* Color blanco para el texto */
-    margin: 0;  /* Eliminar márgenes innecesarios */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Sombra para darle un toque de profundidad */
+    color: white;
+    text-align: center;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
 }
 
-/* ==== ESTILOS PARA EL RESTO DE LA PÁGINA ==== */
+/* ==== CONTENIDO Y CAPÍTULOS ==== */
 .content {
     width: 70%;
     padding: 20px;
     text-align: center;
+    overflow: hidden; /* Para evitar que el contenido se desborde */
 }
 
-h2 {
-    margin-top: 0;
-}
-
-/* ==== BOTONES DE CAPÍTULOS ==== */
 .chapter-list {
-    margin: 20px;
+    margin: 20px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-height: 80vh;
-    overflow: hidden; /* Oculta las barras de desplazamiento */
-    position: relative; /* Necesario para el pseudo-elemento */
+    max-height: 70vh; /* Limita la altura de la lista de capítulos */
+    overflow-y: auto; /* Permite el desplazamiento solo de los capítulos */
+    padding-right: 20px; /* Espacio extra para la barra de desplazamiento */
+    gap: 10px;
 }
 
-.chapter-list-inner {
-    overflow-y: auto; /* Permite el desplazamiento vertical */
-    height: 100%; /* Asegura que ocupe todo el espacio disponible */
-    width: 100%; /* Asegura que ocupe todo el espacio disponible */
+/* Ocultar las barras de desplazamiento */
+.chapter-list::-webkit-scrollbar {
+    display: none; /* Oculta la barra de desplazamiento en Webkit (Chrome/Safari) */
 }
 
+.chapter-list {
+    -ms-overflow-style: none;  /* Para Internet Explorer */
+    scrollbar-width: none; /* Para Firefox */
+}
+
+/* Botones de capítulos ahora ocupan el mismo ancho que la cabecera */
 .chapter-list a {
     display: block;
     margin: 10px;
     padding: 15px 20px;
-    width: calc(100% - 40px);  /* Ajusta el ancho para que sea igual al de la cabecera */
-    background-color: #6c757d;  /* Fondo gris para los botones */
+    width: 100%; /* Ahora ocupa todo el ancho disponible */
+    max-width: 600px; /* Pero tiene un máximo de 600px */
+    background-color: #6c757d;
     color: white;
     text-decoration: none;
     border-radius: 8px;
@@ -110,68 +116,9 @@ h2 {
 }
 
 .chapter-list a:hover {
-    background-color: #5a6268; /* Gris más oscuro al hacer hover */
+    background-color: #5a6268;
     transform: scale(1.05);
     box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* ==== ESTILOS PARA PÁGINAS DE CAPÍTULOS ==== */
-.chapter-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.chapter-header {
-    background-color: #222;
-    padding: 15px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
-
-.chapter-header h1 {
-    margin: 0;
-    font-size: 22px;
-}
-
-/* ==== BOTONES DE NAVEGACIÓN EN LOS CAPÍTULOS ==== */
-.nav-buttons {
-    margin: 15px 0;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.nav-buttons a {
-    color: white;
-    text-decoration: none;
-    padding: 12px 18px;
-    background-color: #6c757d; /* Fondo gris */
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: bold;
-    display: inline-block;
-    transition: 0.3s;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.nav-buttons a:hover {
-    background-color: #5a6268; /* Gris más oscuro al hacer hover */
-    transform: scale(1.05);
-    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* ==== IMÁGENES DEL MANGA ==== */
-.manga-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.manga-container img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 15px;
 }
 
 /* ==== RESPONSIVO ==== */
@@ -183,24 +130,16 @@ h2 {
 
     .sidebar {
         width: 100%;
+        height: auto;
+        position: relative; /* Para que no se quede fijo en dispositivos pequeños */
     }
 
     .content {
         width: 100%;
     }
 
-    .chapter-container {
-        max-width: 100%;
-        padding: 10px;
+    .chapter-list {
+        max-height: none; /* No limitamos la altura en móviles */
+        padding-right: 0;
     }
-
-    .nav-buttons {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
-/* ==== OCULTAR LA BARRA DE BÚSQUEDA ==== */
-input[type="search"], input[type="text"] {
-    display: none; /* Esto ocultará cualquier campo de búsqueda */
 }
