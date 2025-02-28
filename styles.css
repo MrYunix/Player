@@ -237,7 +237,7 @@ input[type="search"], input[type="text"] {
 /* Si quieres ajustar los botones de capítulos específicamente en tamaños responsivos, 
    ajusta el ancho en pantallas pequeñas (por ejemplo, cuando el ancho sea menor a 768px). */
 
-
+@media (max-width: 768px) {
     .chapter-list a {
         width: 100%;  /* Los botones tendrán un ancho del 100% en pantallas pequeñas */
     }
