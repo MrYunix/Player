@@ -86,16 +86,12 @@ h2 {
     flex-direction: column;
     align-items: center;
     max-height: 80vh;
-    overflow-y: hidden; /* Oculta la barra de desplazamiento */
-    position: relative; /* Necesario para el pseudo-elemento */
+    overflow-y: scroll; /* Permite el desplazamiento */
+    scrollbar-width: none; /* Oculta la barra de desplazamiento en Firefox */
 }
 
 .chapter-list::-webkit-scrollbar {
     display: none; /* Oculta la barra de desplazamiento en navegadores WebKit */
-}
-
-.chapter-list {
-    scrollbar-width: none; /* Oculta la barra de desplazamiento en Firefox */
 }
 
 .chapter-list a {
