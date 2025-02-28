@@ -6,6 +6,7 @@ body {
     background-color: #1e1e1e;
     color: white;
     text-align: center;
+    overflow: hidden; /* Evita la barra de desplazamiento en el body */
 }
 
 /* ==== ESTILOS PARA INDEX ==== */
@@ -87,7 +88,6 @@ body {
     gap: 10px;
 }
 
-/* Ocultar las barras de desplazamiento */
 .chapter-list::-webkit-scrollbar {
     display: none; /* Oculta la barra de desplazamiento en Webkit (Chrome/Safari) */
 }
@@ -97,18 +97,18 @@ body {
     scrollbar-width: none; /* Para Firefox */
 }
 
-/* Botones de capítulos ahora ocupan el mismo ancho que la cabecera */
 .chapter-list a {
     display: block;
     margin: 10px;
-    padding: 15px 20px;
+    padding: 20px; /* Ajusta el padding para que sea similar a la cabecera */
     width: 100%; /* Ahora ocupa todo el ancho disponible */
-    max-width: 600px; /* Pero tiene un máximo de 600px */
+    max-width: 800px; /* Aumenta el máximo ancho a 800px */
+    min-width: 600px; /* Establece un ancho mínimo para los botones */
     background-color: #6c757d;
     color: white;
     text-decoration: none;
     border-radius: 8px;
-    font-size: 18px;
+    font-size: 20px; /* Aumenta el tamaño de la fuente */
     font-weight: bold;
     text-align: center;
     transition: 0.3s;
@@ -141,5 +141,9 @@ body {
     .chapter-list {
         max-height: none; /* No limitamos la altura en móviles */
         padding-right: 0;
+    }
+
+    .chapter-list a {
+        min-width: 80%; /* Ajusta el ancho mínimo en móviles */
     }
 }
