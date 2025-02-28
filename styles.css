@@ -94,7 +94,7 @@ h2 {
     display: block;
     margin: 10px;
     padding: 15px 20px;
-    width: 220px;
+    width: calc(100% - 40px);  /* Ajusta el ancho para que sea igual al de la cabecera */
     background-color: #6c757d;  /* Fondo gris para los botones */
     color: white;
     text-decoration: none;
@@ -184,8 +184,6 @@ h2 {
     margin-bottom: 15px;
 }
 
-
-
 /* ==== RESPONSIVO ==== */
 @media (max-width: 768px) {
     .container {
@@ -222,7 +220,7 @@ input[type="search"], input[type="text"] {
     display: block;
     margin: 10px;
     padding: 15px 20px;
-    width: 100%;  /* Esto hace que los botones tengan el mismo ancho que la cabecera */
+    width: calc(100% - 40px);  /* Ajusta el ancho para que sea igual al de la cabecera */
     background-color: #6c757d;
     color: white;
     text-decoration: none;
@@ -242,4 +240,3 @@ input[type="search"], input[type="text"] {
         width: 100%;  /* Los botones tendrán un ancho del 100% en pantallas pequeñas */
     }
 }
-
