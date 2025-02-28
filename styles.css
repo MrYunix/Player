@@ -45,11 +45,16 @@ body {
 }
 
 .banner-description {
-    margin-top: 20px;
-    font-size: 20px;
+    margin-top: 10px; /* Espacio adicional sobre la descripción */
+    font-size: 16px;
     color: #ddd;
     font-style: italic;
-    text-align: center;
+    text-align: justify; /* Justifica el texto para que quede alineado */
+    line-height: 1.5; /* Mejora el espaciado entre líneas */
+    width: 100%; /* Asegúrate de que el ancho sea el mismo que el contenedor */
+    max-width: 300px; /* Ajusta el ancho máximo según sea necesario */
+    margin-left: auto; /* Centra el contenedor */
+    margin-right: auto; /* Centra el contenedor */
 }
 
 /* ==== CABECERA PLAYER ==== */
