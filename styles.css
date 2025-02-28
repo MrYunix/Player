@@ -13,8 +13,8 @@ body {
 .container {
     display: flex;
     flex-direction: row;
-    width: 200%;
-    height: 200vh;
+    width: 100%;
+    height: 100vh;
 }
 
 /* Sidebar */
@@ -39,7 +39,7 @@ body {
 
 .sidebar img {
     max-width: 100%;
-    height: 300px;
+    height: 400px;
     object-fit: cover;
     border-radius: 10px;
 }
