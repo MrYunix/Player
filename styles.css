@@ -69,6 +69,23 @@ body {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
 }
 
+.nav-buttons a {
+    display: inline-block; /* Asegúrate de que los enlaces se comporten como bloques */
+    padding: 15px 30px; /* Espaciado interno para que se parezcan a botones */
+    margin: 10px; /* Espaciado entre botones */
+    background-color: #6c757d; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 18px; /* Tamaño de la fuente */
+    font-weight: bold; /* Negrita */
+    transition: background-color 0.3s; /* Efecto de transición */
+}
+
+.nav-buttons a:hover {
+    background-color: #5a6268; /* Color al pasar el ratón */
+}
+
 /* ==== CONTENIDO Y CAPÍTULOS ==== */
 .content {
     width: 70%;
