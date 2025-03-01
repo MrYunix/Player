@@ -153,9 +153,13 @@ body {
 
 /* ==== RESPONSIVO ==== */
 @media (max-width: 768px) {
+    body {
+        overflow: auto; /* Permitir desplazamiento en móviles */
+    }
+
     .container {
-        flex-direction: column;
-        height: auto;
+        flex-direction: column; /* Mantener la estructura en columna para móviles */
+        height: auto; /* Permitir que la altura se ajuste automáticamente */
     }
 
     .sidebar {
@@ -173,6 +177,17 @@ body {
         padding-right: 0;
     }
 
+    .chapter-list a {
+        min-width: 80%; /* Ajusta el ancho mínimo en móviles */
+        padding: 15px; /* Reduce el padding para que sea más fácil de tocar */
+        font-size: 18px; /* Ajusta el tamaño de la fuente para móviles */
+    }
+
+    .nav-buttons a {
+        padding: 10px 20px; /* Ajusta el tamaño de los botones en móviles */
+        font-size: 16px; /* Ajusta el tamaño de la fuente para móviles */
+    }
+}
     .chapter-list a {
         min-width: 80%; /* Ajusta el ancho mínimo en móviles */
     }
