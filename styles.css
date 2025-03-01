@@ -53,7 +53,7 @@ body {
 }
 
 .banner-description {
-    margin-top: 10px; /* Espacio adicional sobre la descripción */
+    margin-top: 5px; /* Espacio adicional sobre la descripción */
     font-size: 16px;
     color: #ddd;
     font-style: italic;
