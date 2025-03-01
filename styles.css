@@ -139,7 +139,6 @@ body {
 }
 
 /* ==== RESPONSIVO ==== */
-/* ==== RESPONSIVO ==== */
 @media (max-width: 768px) {
     body {
         overflow: auto; /* Permitir desplazamiento en móviles */
