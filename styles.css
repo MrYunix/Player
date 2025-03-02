@@ -6,7 +6,7 @@ body {
     background-color: #1e1e1e;
     color: white;
     text-align: center;
-    overflow: hidden; /* Evita la barra de desplazamiento en el body */
+
 }
 
 /* ==== ESTILOS PARA INDEX ==== */
@@ -17,28 +17,7 @@ body {
     height: 100vh;
 }
 
-/* ==== ESTILOS PARA EL CONTENIDO DEL MANGA ==== */
-.manga-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-height: 80vh; /* Limita la altura del contenedor */
-    overflow-y: auto; /* Permite el desplazamiento vertical */
-    padding: 20px; /* Espaciado interno */
-    background-color: #1e1e1e; /* Color de fondo para el contenedor */
-}
 
-.manga-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.manga-container img {
-    max-width: 100%;
-    height: auto;
-    margin: 10px 0;
-}
 
 /* Sidebar */
 .sidebar {
