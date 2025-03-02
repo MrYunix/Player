@@ -22,7 +22,22 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-height: 80vh; /* Limita la altura del contenedor */
     overflow-y: auto; /* Permite el desplazamiento vertical */
+    padding: 20px; /* Espaciado interno */
+    background-color: #1e1e1e; /* Color de fondo para el contenedor */
+}
+
+.manga-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.manga-container img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
 }
 
 /* Sidebar */
