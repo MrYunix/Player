@@ -17,6 +17,14 @@ body {
     height: 100vh;
 }
 
+/* ==== ESTILOS PARA EL CONTENIDO DEL MANGA ==== */
+.manga-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto; /* Permite el desplazamiento vertical */
+}
+
 /* Sidebar */
 .sidebar {
     width: 30%;
