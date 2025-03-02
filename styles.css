@@ -9,6 +9,25 @@ body {
 
 }
 
+<style>
+.discord-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #5865F2;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.discord-button:hover {
+  background-color: #4752C4;
+  cursor: pointer;
+}
+</style>
+
 /* ==== ESTILOS PARA INDEX ==== */
 .container {
     display: flex;
