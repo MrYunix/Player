@@ -158,19 +158,6 @@ body {
     border-radius: 5px; /* Bordes redondeados opcionales */
 }
 
-.wrapper {
-    width: 1280px;  /* Ancho fijo */
-    height: 720px;  /* Alto fijo */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform-origin: top left;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
-}
 
 /* ==== ESTILOS RESPONSIVOS ==== */
 @media (max-width: 768px) {
