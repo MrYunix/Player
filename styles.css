@@ -8,38 +8,41 @@ body {
     text-align: center;
 }
 
-/* Botón de Discord */
-.discord-button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 14px;
-    background-color: #5865F2;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
+/* ==== BOTONES Y ENLACES UNIFORMES ==== */
+button, .discord-button, .nav-buttons a, .chapter-list a {
+    display: block;
+    width: 90%;
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 15px 20px;
+    font-size: 16px;
     font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-.discord-button:hover {
-    background-color: #4752C4;
+    text-align: center;
+    color: white;
+    background-color: #5865F2;
+    text-decoration: none;
+    border-radius: 8px;
+    border: none;
+    transition: background-color 0.3s, transform 0.2s;
     cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* ==== ESTILOS PARA INDEX ==== */
-.container {
-    display: flex;
-    flex-direction: column; /* Apilar los elementos en móviles */
-    width: 100%;
-    height: auto; /* Altura automática en móviles */
+button:hover, .discord-button:hover, .nav-buttons a:hover, .chapter-list a:hover {
+    background-color: #4752C4;
+    transform: scale(1.05);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Sidebar */
+/* ==== SIDEBAR ==== */
 .sidebar {
-    width: 100%; /* Ocupar todo el ancho en móviles */
-    height: auto; /* Altura automática */
+    width: 100%;
+    height: auto;
     padding: 15px;
-    position: relative; /* Se elimina sticky en móviles */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .sidebar h1 {
@@ -47,53 +50,34 @@ body {
     margin-bottom: 10px;
 }
 
+/* Imagen dentro de sidebar */
 .sidebar img {
-    max-width: 90%; /* Reduce el tamaño en móviles */
+    width: 90%;
+    max-width: 400px; /* Máximo tamaño de la imagen */
     height: auto;
     object-fit: cover;
     border-radius: 10px;
 }
 
-/* ==== CABECERA PLAYER ==== */
-.page-header {
-    background-color: #444;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.page-title {
-    font-size: 24px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-}
-
-.nav-buttons a {
-    display: block; /* Ocupar ancho completo en móviles */
-    padding: 12px 20px;
-    font-size: 16px;
-    margin: 5px auto;
-    width: 80%; /* Ajustar tamaño */
+/* Botón de Discord con el mismo tamaño que la imagen */
+.discord-button {
+    width: 90%;
+    max-width: 400px; /* Coincide con el tamaño de la imagen */
+    padding: 15px 20px;
+    box-sizing: border-box;
 }
 
 /* ==== CONTENIDO Y CAPÍTULOS ==== */
 .content {
-    width: 100%; /* Ocupar todo el ancho */
+    width: 100%;
     padding: 15px;
 }
 
 .chapter-list {
     width: 100%;
-    max-height: none; /* Elimina la restricción de altura */
-    overflow-y: visible; /* Permite que todo el contenido sea visible */
+    max-height: none;
+    overflow-y: visible;
     padding-right: 0;
-}
-
-.chapter-list a {
-    width: 90%; /* Reduce el ancho para que encaje mejor */
-    min-width: auto; /* Elimina el ancho mínimo */
-    max-width: 100%;
-    padding: 15px;
-    font-size: 16px;
 }
 
 /* Contenedor de la galería */
@@ -102,14 +86,14 @@ body {
 }
 
 .manga-page {
-    width: 95vw; /* Asegurar que ocupe casi todo el ancho */
+    width: 95vw;
     max-width: 100%;
 }
 
-/* ==== MEDIA QUERIES PARA TABLETS Y MÓVILES ==== */
+/* ==== MEDIA QUERIES PARA TABLETS ==== */
 @media (min-width: 768px) {
     .container {
-        flex-direction: row; /* Restaurar diseño en tablets */
+        flex-direction: row;
     }
 
     .sidebar {
@@ -129,7 +113,7 @@ body {
         padding-right: 20px;
     }
 
-    .chapter-list a {
+    button, .discord-button, .nav-buttons a, .chapter-list a {
         width: 100%;
         max-width: 800px;
         min-width: 600px;
