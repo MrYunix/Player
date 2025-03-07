@@ -8,16 +8,6 @@
 </head>
 <body>
 
-    <div class="container"><!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gato Manga</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
     <div class="container">
         <aside class="sidebar">
             <img src="banner.jpg" alt="Banner del manga">
@@ -42,38 +32,7 @@
             link.href = `cap${i}.html`;
             link.textContent = `Capítulo ${i}`;
             link.classList.add('button');
-            const listItem = document.createElement('li');
-            listItem.appendChild(link);
-            chapterList.appendChild(listItem);
-        }
-    </script>
-
-</body>
-</html>
-        <aside class="sidebar">
-            <img src="banner.jpg" alt="Banner del manga">
-            <br>
-            <a href="https://discord.gg/239MzkfbHt" target="_blank" class="discord-button"> Discord </a>
-        </aside>
-
-        <main class="content">
-            <header class="page-header">
-                <h1 class="page-title">Gato Manga</h1>
-            </header>
-            <nav class="chapter-list">
-                <ul id="chapter-list"></ul>
-            </nav>
-        </main>
-    </div>
-
-    <script>
-        const chapterList = document.getElementById('chapter-list');
-        for (let i = 1; i <= 225; i++) {
-            const link = document.createElement('a');
-            link.href = `cap${i}.html`;
-            link.textContent = `Capítulo ${i}`;
-            link.classList.add('button');
-            const listItem = document.createElement('li');
+            const listItem = document.createElement('ul');
             listItem.appendChild(link);
             chapterList.appendChild(listItem);
         }
