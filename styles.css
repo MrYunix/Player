@@ -6,89 +6,165 @@ body {
     background-color: #1e1e1e;
     color: white;
     text-align: center;
+
 }
 
-/* ==== BOTONES Y ENLACES UNIFORMES ==== */
-button, .discord-button, .nav-buttons a, .chapter-list a {
-    display: block;
-    width: 90%;
-    max-width: 400px;
-    margin: 10px auto;
-    padding: 15px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    color: white;
-    background-color: #5865F2;
-    text-decoration: none;
-    border-radius: 8px;
-    border: none;
-    transition: background-color 0.3s, transform 0.2s;
-    cursor: pointer;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+.discord-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #5865F2;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  transition: background-color 0.3s;
 }
 
-button:hover, .discord-button:hover, .nav-buttons a:hover, .chapter-list a:hover {
-    background-color: #4752C4;
-    transform: scale(1.05);
-    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+.discord-button:hover {
+  background-color: #4752C4;
+  cursor: pointer;
 }
 
-/* ==== SIDEBAR ==== */
-.sidebar {
+/* ==== ESTILOS PARA INDEX ==== */
+.container {
+    display: flex;
+    flex-direction: row;
     width: 100%;
-    height: auto;
-    padding: 15px;
-    position: relative;
+    height: 100vh;
+}
+
+
+
+/* Sidebar */
+.sidebar {
+    width: 30%;
+    background-color: #222;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: sticky; /* Se queda fijo al hacer scroll */
+    top: 0;
+    height: 100vh;
 }
 
 .sidebar h1 {
-    font-size: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
 }
 
-/* Imagen dentro de sidebar */
 .sidebar img {
-    width: 90%;
-    max-width: 400px; /* Máximo tamaño de la imagen */
-    height: auto;
+    max-width: 100%;
+    height: 550px;
     object-fit: cover;
     border-radius: 10px;
 }
 
-/* Botón de Discord con el mismo tamaño que la imagen */
-.discord-button {
-    width: 90%;
-    max-width: 400px; /* Coincide con el tamaño de la imagen */
-    padding: 15px 20px;
-    box-sizing: border-box;
+/* ==== CABECERA PLAYER ==== */
+.page-header {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.page-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.nav-buttons a {
+    display: inline-block; /* Asegúrate de que los enlaces se comporten como bloques */
+    padding: 15px 30px; /* Espaciado interno para que se parezcan a botones */
+    margin: 10px; /* Espaciado entre botones */
+    background-color: #6c757d; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 18px; /* Tamaño de la fuente */
+    font-weight: bold; /* Negrita */
+    transition: background-color 0.3s; /* Efecto de transición */
+}
+
+.nav-buttons a:hover {
+    background-color: #5a6268; /* Color al pasar el ratón */
 }
 
 /* ==== CONTENIDO Y CAPÍTULOS ==== */
 .content {
-    width: 100%;
-    padding: 15px;
+    width: 70%;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden; /* Para evitar que el contenido se desborde */
 }
 
 .chapter-list {
-    width: 100%;
-    max-height: none;
-    overflow-y: visible;
-    padding-right: 0;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 70vh; /* Limita la altura de la lista de capítulos */
+    overflow-y: auto; /* Permite el desplazamiento solo de los capítulos */
+    padding-right: 20px; /* Espacio extra para la barra de desplazamiento */
+    gap: 10px;
+}
+
+.chapter-list::-webkit-scrollbar {
+    display: none; /* Oculta la barra de desplazamiento en Webkit (Chrome/Safari) */
+}
+
+.chapter-list {
+    -ms-overflow-style: none;  /* Para Internet Explorer */
+    scrollbar-width: none; /* Para Firefox */
+}
+
+.chapter-list a {
+    display: block;
+    margin: 10px;
+    padding: 20px; /* Ajusta el padding para que sea similar a la cabecera */
+    width: 100%; /* Ahora ocupa todo el ancho disponible */
+    max-width: 800px; /* Aumenta el máximo ancho a 800px */
+    min-width: 600px; /* Establece un ancho mínimo para los botones */
+    background-color: #6c757d;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 20px; /* Aumenta el tamaño de la fuente */
+    font-weight: bold;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.chapter-list a:hover {
+    background-color: #5a6268;
+    transform: scale(1.05);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Contenedor de la galería */
 #gallery {
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }
 
+/* Imágenes del manga con mismo ancho, pero altura original */
 .manga-page {
-    width: 95vw;
-    max-width: 100%;
+    width: 80vw;  /* Mantiene el mismo ancho para todas */
+    max-width: 800px; /* No sobrepasa los 800px */
+    height: auto; /* Mantiene la altura original */
+    border-radius: 5px; /* Bordes redondeados opcionales */
 }
+
 
 /* ==== MEDIA QUERIES PARA TABLETS ==== */
 @media (min-width: 768px) {
