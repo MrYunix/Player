@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player - Gato Manga</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="page-header">
+        <h1>Player - Capítulo 157</h1>
+    </header>
+
+    <nav class="nav-buttons">
+        <a href="index.html">🏠 Volver a Inicio</a>
+        <a href="cap156.html">⬅️ Capítulo Anterior</a>
+        <a href="cap158.html">➡️ Siguiente Capítulo</a>
+    </nav>
+
+    <main>
+        <div id="gallery"></div>
+    </main>
+
+    <footer>
+        <nav class="nav-buttons">
+            <a href="index.html">🏠 Volver a Inicio</a>
+            <a href="cap156.html">⬅️ Capítulo Anterior</a>
+            <a href="cap158.html">➡️ Siguiente Capítulo</a>
+        </nav>
+    </footer>
+
+    <script>
+        const imageIDs = [
+          "1Hc73SpAhymPeTuZqR4AGJgSahyen_5lQ"
+        ];
+
+        const gallery = document.getElementById("gallery");
+        imageIDs.forEach(id => {
+            const img = document.createElement("img");
+            img.src = `https://lh3.googleusercontent.com/d/${id}`;
+            img.alt = "Página del manga";
+            img.classList.add("manga-page");
+            gallery.appendChild(img);
+        });
+    </script>
+
+</body>
+</html>
