@@ -6,6 +6,7 @@ body {
     background-color: #1e1e1e;
     color: white;
     text-align: center;
+
 }
 
 .discord-button {
@@ -15,6 +16,7 @@ body {
   color: white;
   text-decoration: none;
   border-radius: 4px;
+  font-family: Arial, sans-serif;
   font-weight: bold;
   transition: background-color 0.3s;
 }
@@ -32,6 +34,8 @@ body {
     height: 100vh;
 }
 
+
+
 /* Sidebar */
 .sidebar {
     width: 30%;
@@ -41,7 +45,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    position: sticky;
+    position: sticky; /* Se queda fijo al hacer scroll */
     top: 0;
     height: 100vh;
 }
@@ -54,7 +58,7 @@ body {
 
 .sidebar img {
     max-width: 100%;
-    height: auto;
+    height: 550px;
     object-fit: cover;
     border-radius: 10px;
 }
@@ -70,26 +74,27 @@ body {
 .page-title {
     font-size: 36px;
     font-weight: bold;
+    color: white;
     text-align: center;
     margin: 0;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
 }
 
 .nav-buttons a {
-    display: inline-block;
-    padding: 15px 30px;
-    margin: 10px;
-    background-color: #6c757d;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: bold;
-    transition: background-color 0.3s;
+    display: inline-block; /* Asegúrate de que los enlaces se comporten como bloques */
+    padding: 15px 30px; /* Espaciado interno para que se parezcan a botones */
+    margin: 10px; /* Espaciado entre botones */
+    background-color: #6c757d; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 18px; /* Tamaño de la fuente */
+    font-weight: bold; /* Negrita */
+    transition: background-color 0.3s; /* Efecto de transición */
 }
 
 .nav-buttons a:hover {
-    background-color: #5a6268;
+    background-color: #5a6268; /* Color al pasar el ratón */
 }
 
 /* ==== CONTENIDO Y CAPÍTULOS ==== */
@@ -97,7 +102,7 @@ body {
     width: 70%;
     padding: 20px;
     text-align: center;
-    overflow: hidden;
+    overflow: hidden; /* Para evitar que el contenido se desborde */
 }
 
 .chapter-list {
@@ -105,32 +110,33 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-height: 70vh;
-    overflow-y: auto;
-    padding-right: 20px;
+    max-height: 70vh; /* Limita la altura de la lista de capítulos */
+    overflow-y: auto; /* Permite el desplazamiento solo de los capítulos */
+    padding-right: 20px; /* Espacio extra para la barra de desplazamiento */
     gap: 10px;
 }
 
 .chapter-list::-webkit-scrollbar {
-    display: none;
+    display: none; /* Oculta la barra de desplazamiento en Webkit (Chrome/Safari) */
 }
 
 .chapter-list {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    -ms-overflow-style: none;  /* Para Internet Explorer */
+    scrollbar-width: none; /* Para Firefox */
 }
 
 .chapter-list a {
     display: block;
     margin: 10px;
-    padding: 15px;
-    width: 100%;
-    max-width: 800px;
+    padding: 20px; /* Ajusta el padding para que sea similar a la cabecera */
+    width: 100%; /* Ahora ocupa todo el ancho disponible */
+    max-width: 800px; /* Aumenta el máximo ancho a 800px */
+    min-width: 600px; /* Establece un ancho mínimo para los botones */
     background-color: #6c757d;
     color: white;
     text-decoration: none;
     border-radius: 8px;
-    font-size: 18px;
+    font-size: 20px; /* Aumenta el tamaño de la fuente */
     font-weight: bold;
     text-align: center;
     transition: 0.3s;
@@ -151,14 +157,13 @@ body {
     padding: 20px;
 }
 
-/* Imágenes del manga */
+/* Imágenes del manga con mismo ancho, pero altura original */
 .manga-page {
-    width: 80vw;
-    max-width: 800px;
-    height: auto;
-    border-radius: 5px;
+    width: 80vw;  /* Mantiene el mismo ancho para todas */
+    max-width: 800px; /* No sobrepasa los 800px */
+    height: auto; /* Mantiene la altura original */
+    border-radius: 5px; /* Bordes redondeados opcionales */
 }
-
 /* ==== RESPONSIVE ==== */
 @media (max-width: 768px) {
     .container {
