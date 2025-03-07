@@ -109,20 +109,13 @@ body {
     margin: 20px 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
     max-height: 70vh; /* Limita la altura de la lista de capítulos */
     overflow-y: auto; /* Permite el desplazamiento solo de los capítulos */
-    padding-right: 20px; /* Espacio extra para la barra de desplazamiento */
-    gap: 10px;
-}
-
-.chapter-list::-webkit-scrollbar {
-    display: none; /* Oculta la barra de desplazamiento en Webkit (Chrome/Safari) */
 }
 
 .chapter-list {
-    -ms-overflow-style: none;  /* Para Internet Explorer */
-    scrollbar-width: none; /* Para Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .chapter-list a {
@@ -164,50 +157,58 @@ body {
     height: auto; /* Mantiene la altura original */
     border-radius: 5px; /* Bordes redondeados opcionales */
 }
-/* ==== RESPONSIVE ==== */
+
+/* ==== ESTILOS RESPONSIVOS ==== */
 @media (max-width: 768px) {
     .container {
-        flex-direction: column; /* Apila la sidebar y el contenido */
-        height: auto;
+        flex-direction: column; /* Cambia a disposición vertical */
+        align-items: center; /* Centra los elementos */
+        justify-content: flex-start;
+        height: auto; /* Permite que crezca según el contenido */
     }
 
+    /* Sidebar */
     .sidebar {
         width: 100%;
         height: auto;
-        padding: 10px;
-        position: relative; /* Evita que se quede fija */
+        position: relative; /* Elimina el sticky */
+        padding: 20px 0;
     }
 
     .sidebar img {
+        width: 80%; /* Ajusta la imagen */
         height: auto;
-        max-height: 300px;
     }
 
+    /* Contenido */
     .content {
         width: 100%;
-        padding: 15px;
+        padding: 10px;
     }
 
-    .chapter-list {
-        max-height: 50vh; /* Reduce la altura máxima en móviles */
-    }
-
-    .chapter-list a {
-        min-width: auto;
-        width: 90%;
-        font-size: 16px;
-    }
-
-    .nav-buttons a {
-        padding: 10px 20px;
-        font-size: 16px;
-    }
-
+    /* Cabecera */
     .page-title {
-        font-size: 28px;
+        font-size: 28px; /* Reduce tamaño del título */
     }
 
+    /* Botones de navegación */
+    .nav-buttons a {
+        width: 90%; /* Botones ocupan más espacio */
+        padding: 12px 0;
+        font-size: 16px;
+    }
+
+    /* Lista de capítulos */
+    .chapter-list a {
+        width: 90%;
+        min-width: unset;
+        max-width: unset;
+        font-size: 18px;
+    }
+
+    /* Galería */
     .manga-page {
         width: 95vw;
+        max-width: 600px;
     }
 }
