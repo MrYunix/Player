@@ -174,8 +174,10 @@ body {
     }
 
     .sidebar img {
-        height: auto;
-        max-height: 300px;
+        width: 100%; /* Asegura que el banner ocupe todo el ancho */
+        max-height: 300px; /* Controla la altura */
+        object-fit: cover; /* Mantiene la proporción */
+        border-radius: 10px;
     }
 
     .content {
@@ -204,5 +206,21 @@ body {
 
     .manga-page {
         width: 95vw;
+    }
+
+    /* Ajuste para que la cabecera, botón de Discord y banner tengan el mismo tamaño */
+    .page-header {
+        width: 100%; /* Ocupa todo el ancho */
+        box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+        padding: 15px;
+        text-align: center;
+    }
+
+    .discord-button {
+        display: block; /* Hace que el botón ocupe el ancho disponible */
+        width: 90%; /* Ajusta el tamaño al 90% del contenedor */
+        max-width: 300px; /* Evita que sea demasiado grande */
+        margin: 10px auto; /* Centra el botón */
+        text-align: center;
     }
 }
