@@ -166,38 +166,3 @@ body {
 }
 
 
-/* ==== MEDIA QUERIES PARA TABLETS ==== */
-@media (min-width: 768px) {
-    .container {
-        flex-direction: row;
-    }
-
-    .sidebar {
-        width: 30%;
-        height: 100vh;
-        position: sticky;
-        top: 0;
-    }
-
-    .content {
-        width: 70%;
-    }
-
-    .chapter-list {
-        max-height: 70vh;
-        overflow-y: auto;
-        padding-right: 20px;
-    }
-
-    button, .discord-button, .nav-buttons a, .chapter-list a {
-        width: 100%;
-        max-width: 800px;
-        min-width: 600px;
-        font-size: 18px;
-    }
-
-    .manga-page {
-        width: 80vw;
-        max-width: 800px;
-    }
-}
