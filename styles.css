@@ -154,8 +154,13 @@ body {
 .manga-page {
     width: 80vw;  /* Mantiene el mismo ancho para todas */
     max-width: 800px; /* No sobrepasa los 800px */
-    height: auto; /* Mantiene la altura original */
+    height: auto; /* Mantiene la proporción original */
     border-radius: 5px; /* Bordes redondeados opcionales */
+    
+    /* 🔥 Evita pixelado 🔥 */
+    image-rendering: auto; /* Asegura mejor calidad */
+    image-rendering: crisp-edges; /* Para navegadores que lo soportan */
+    image-rendering: high-quality; /* Para navegadores modernos */
 }
 
 /* ==== ESTILOS RESPONSIVOS ==== */
