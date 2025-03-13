@@ -151,6 +151,18 @@ body {
 }
 
 /* Imágenes del manga con mismo ancho, pero altura original */
+.manga-page {
+    width: 60vw;  /* Tamaño más pequeño */
+    max-width: 600px; /* Límite de tamaño */
+    height: auto; /* Mantiene la proporción original */
+    border-radius: 5px; /* Bordes redondeados opcionales */
+
+    /* 🔥 Mejora la calidad */
+    max-height: 100%;
+    object-fit: contain; /* No corta ni estira */
+    display: block; /* Evita espacios extra */
+    image-rendering: auto; /* Renderiza con la mejor calidad */
+}
 
 
 /* ==== ESTILOS RESPONSIVOS ==== */
