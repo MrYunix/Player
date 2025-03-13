@@ -152,17 +152,18 @@ body {
 
 /* Imágenes del manga con mismo ancho, pero altura original */
 .manga-page {
-    width: 60vw;  /* Tamaño más pequeño */
-    max-width: 600px; /* Límite de tamaño */
-    height: auto; /* Mantiene la proporción original */
+    width: 80vw;  /* Mantiene el mismo ancho para todas las imágenes */
+    max-width: 800px; /* No sobrepasa los 800px */
+    height: auto; /* Mantiene la altura original */
     border-radius: 5px; /* Bordes redondeados opcionales */
-
+    
     /* 🔥 Mejora la calidad */
-    max-height: 100%;
-    object-fit: contain; /* No corta ni estira */
-    display: block; /* Evita espacios extra */
-    image-rendering: auto; /* Renderiza con la mejor calidad */
+    image-rendering: auto; /* Permite que el navegador use la mejor calidad posible */
+    image-rendering: crisp-edges; /* Para navegadores que lo soportan */
+    object-fit: contain; /* Asegura que la imagen se ajuste sin recortarse */
+    display: block; /* Elimina el espacio debajo de la imagen */
 }
+
 
 
 /* ==== ESTILOS RESPONSIVOS ==== */
@@ -217,7 +218,7 @@ body {
 
     /* Galería */
     .manga-page {
-        width: 90vw; /* En móviles, la imagen será más grande */
-        max-width: 400px; /* Límite de tamaño */
+        width: 95vw;  /* Más grande en móviles */
+        max-width: 600px; /* Limita el tamaño en pantallas pequeñas */
     }
 }
